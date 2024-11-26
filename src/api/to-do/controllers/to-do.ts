@@ -3,7 +3,9 @@
  */
 
 import {factories} from '@strapi/strapi'
+import {errors} from '@strapi/utils';
 
+const {ApplicationError} = errors;
 export default factories.createCoreController('api::to-do.to-do', ({strapi}) => (
     {
         async customApi(ctx) {
@@ -23,14 +25,9 @@ export default factories.createCoreController('api::to-do.to-do', ({strapi}) => 
             return {data, meta};
         },
         async associateWithOwner(ctx) {
-            const {documentId} = ctx.params;
-            console.log({documentId})
-
+            const {documentId} = ctx.query;
             if (!documentId) {
-                return ctx.send(
-                    {
-                        message: 'Document Id and Owner Id are required'
-                    })
+                throw new ApplicationError('Document ID is required', {code: 400});
             }
             try {
                 const data = await strapi.service('api::to-do.to-do').associateWithOwner(documentId);

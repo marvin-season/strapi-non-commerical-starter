@@ -10,7 +10,7 @@ export default {
         },
         {
             method: 'GET',
-            path: '/to-do/find-with-owner/:documentId',
+            path: '/to-do/find-with-owner',
             handler: 'to-do.associateWithOwner',
             config: {
                 auth: false
