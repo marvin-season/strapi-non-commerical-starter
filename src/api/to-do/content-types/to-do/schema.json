@@ -16,6 +16,12 @@
     },
     "complete": {
       "type": "boolean"
+    },
+    "todo_owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::todo-owner.todo-owner",
+      "mappedBy": "to_do"
     }
   }
 }

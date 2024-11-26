@@ -389,6 +389,39 @@ export interface ApiToDoToDo extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::to-do.to-do'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    todo_owner: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::todo-owner.todo-owner'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTodoOwnerTodoOwner extends Struct.CollectionTypeSchema {
+  collectionName: 'todo_owners';
+  info: {
+    displayName: 'TodoOwner';
+    pluralName: 'todo-owners';
+    singularName: 'todo-owner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::todo-owner.todo-owner'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    to_do: Schema.Attribute.Relation<'oneToOne', 'api::to-do.to-do'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -905,6 +938,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::to-do.to-do': ApiToDoToDo;
+      'api::todo-owner.todo-owner': ApiTodoOwnerTodoOwner;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
