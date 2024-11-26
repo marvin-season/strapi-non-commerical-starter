@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "to_dos",
+  "info": {
+    "singularName": "to-do",
+    "pluralName": "to-dos",
+    "displayName": "ToDo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "complete": {
+      "type": "boolean"
+    }
+  }
+}
