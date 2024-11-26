@@ -33,17 +33,12 @@ export default factories.createCoreController('api::to-do.to-do', ({strapi}) => 
                     })
             }
             try {
-                const todo = await strapi.documents('api::to-do.to-do').findOne({
-                    documentId,
-                    populate: ['todo_owner']
-                });
-
-                console.log({todo})
-                if (!todo) {
+                const data = await strapi.service('api::to-do.to-do').associateWithOwner(documentId);
+                if (!data) {
                     return ctx.notFound('Todo not found');
                 }
 
-                return ctx.send(todo);
+                return ctx.send(data);
             } catch (error) {
                 return ctx.badRequest(error.message);
             }
