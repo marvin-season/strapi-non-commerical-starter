@@ -4,7 +4,8 @@
   "info": {
     "singularName": "to-do",
     "pluralName": "to-dos",
-    "displayName": "ToDo"
+    "displayName": "ToDo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,9 @@
     },
     "complete": {
       "type": "boolean"
+    },
+    "name": {
+      "type": "string"
     },
     "todo_owner": {
       "type": "relation",

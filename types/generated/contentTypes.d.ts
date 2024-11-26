@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiToDoToDo extends Struct.CollectionTypeSchema {
   collectionName: 'to_dos';
   info: {
+    description: '';
     displayName: 'ToDo';
     pluralName: 'to-dos';
     singularName: 'to-do';
@@ -388,6 +389,7 @@ export interface ApiToDoToDo extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::to-do.to-do'> &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     todo_owner: Schema.Attribute.Relation<
       'oneToOne',
@@ -402,6 +404,7 @@ export interface ApiToDoToDo extends Struct.CollectionTypeSchema {
 export interface ApiTodoOwnerTodoOwner extends Struct.CollectionTypeSchema {
   collectionName: 'todo_owners';
   info: {
+    description: '';
     displayName: 'TodoOwner';
     pluralName: 'todo-owners';
     singularName: 'todo-owner';

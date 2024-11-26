@@ -4,7 +4,8 @@
   "info": {
     "singularName": "todo-owner",
     "pluralName": "todo-owners",
-    "displayName": "TodoOwner"
+    "displayName": "TodoOwner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
