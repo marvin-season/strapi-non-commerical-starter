@@ -12,6 +12,12 @@ export default factories.createCoreController('api::to-do.to-do', ({strapi}) => 
             } catch (e) {
                 ctx.body = 'error'
             }
+        },
+        // @override
+        async find(ctx) {
+            return {
+                data: 'hi'
+            }
         }
     }
 ));
