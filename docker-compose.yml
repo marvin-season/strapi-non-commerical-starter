@@ -3,11 +3,11 @@ version: '3.8'
 services:
   pg-strapi-starter-non-commercial:
     image: postgres
-    container_name: pg-strapi-starter-non-commercial
+    container_name: ${CONTAINER_NAME}
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: pg-strapi-starter-non-commercial
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
     ports:
       - "5432:5432"
     volumes:
