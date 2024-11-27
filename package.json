@@ -9,6 +9,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
+    "strapi-export": "strapi export -f bankup",
+    "strapi-import": "strapi import -f bankup.tar.gz.enc",
     "prettier:check": "prettier --check ./src",
     "prettier": "prettier --write ./src"
   },
