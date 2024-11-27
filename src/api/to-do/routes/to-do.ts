@@ -2,6 +2,6 @@
  * to-do router
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from "@strapi/strapi";
 
-export default factories.createCoreRouter('api::to-do.to-do');
+export default factories.createCoreRouter("api::to-do.to-do");
