@@ -27,5 +27,5 @@ pnpm run develop
 ```shell
 pnpm run strapi-import
 ```
-+ username: 2764876579@qq.com
++ username: admin@admin.xyz
 + password: Aabc#123456
