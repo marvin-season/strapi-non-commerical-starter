@@ -22,6 +22,10 @@ pnpm run develop
 ```
 
 
-## Admin bankup demo 
+## import bankup demo if you need!
+
+```shell
+pnpm run strapi-import
+```
 + username: 2764876579@qq.com
 + password: Aabc#123456
