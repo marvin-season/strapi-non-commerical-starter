@@ -4,18 +4,24 @@
 pnpm install
 ```
 
-## database
+## .ENV
+copy .env.example to .env
+
+
+### database sqlite 默认
+
+### database pg 可选
 ```shell
 docker-compose up -d
 ```
 
 
-## start
+## develop
 ```shell
 pnpm run develop
 ```
 
 
-## Admin
+## Admin bankup demo 
 + username: 2764876579@qq.com
 + password: Aabc#123456
