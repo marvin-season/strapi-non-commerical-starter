@@ -1,22 +1,28 @@
-## install
+## strapi cms
+references [strapi official website](https://docs.strapi.io/dev-docs/intro)
 
+## startup
+
+
+**1st step: install the dep** 
 ```shell
 pnpm install
 ```
 
-## .ENV
-copy .env.example to .env
+**2ed step: 环境变量**
 
+please copy the `.env.example` to `.env`. The content of .env customized by yourself!
 
-### database sqlite 默认
-
-### database pg 可选
+**3rd: database**
++ **sqlite 默认**
++ **pg 可选**
 ```shell
 docker-compose up -d
 ```
++ mysql ...
 
 
-## develop
+**4th: develop**
 ```shell
 pnpm run develop
 ```
