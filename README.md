@@ -1,21 +1,37 @@
-## install
+## strapi cms
+references [strapi official website](https://docs.strapi.io/dev-docs/intro)
 
+## startup
+
+
+**1st step: install the dep** 
 ```shell
 pnpm install
 ```
 
-## database
+**2ed step: 环境变量**
+
+please copy the `.env.example` to `.env`. The content of .env customized by yourself!
+
+**3rd: database**
++ **sqlite 默认**
++ **pg 可选**
 ```shell
 docker-compose up -d
 ```
++ mysql ...
 
 
-## start
+**4th: develop**
 ```shell
 pnpm run develop
 ```
 
 
-## Admin
-+ username: 2764876579@qq.com
+## import bankup demo if you need!
+
+```shell
+pnpm run strapi-import
+```
++ username: admin@admin.xyz
 + password: Aabc#123456
