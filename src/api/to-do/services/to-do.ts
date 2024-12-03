@@ -13,5 +13,14 @@ export default factories.createCoreService(
         populate: ["todo_owner"],
       });
     },
+    async searchByName(name: string) {
+      return strapi.documents("api::to-do.to-do").findMany({
+        filters: {
+          name: {
+            $containsi: name,
+          },
+        },
+      });
+    },
   }),
 );

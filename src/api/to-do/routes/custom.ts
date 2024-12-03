@@ -16,5 +16,13 @@ export default {
         auth: false,
       },
     },
+    {
+      method: "GET",
+      path: "/to-do/searchByName",
+      handler: "to-do.searchByName",
+      config: {
+        auth: false,
+      },
+    },
   ],
 };

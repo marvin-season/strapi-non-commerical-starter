@@ -43,5 +43,11 @@ export default factories.createCoreController(
         return ctx.badRequest(error.message);
       }
     },
+    // 模糊查询
+    async searchByName(ctx) {
+      const { name } = ctx.query;
+      const data = await strapi.service("api::to-do.to-do").searchByName(name);
+      return ctx.send({ data });
+    },
   }),
 );
