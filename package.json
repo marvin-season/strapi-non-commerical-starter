@@ -4,6 +4,7 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
+    "setup": "npx pnpm install && cp .env.example .env",
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
