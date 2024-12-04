@@ -1,6 +1,9 @@
 ## strapi cms
 references [strapi official website](https://docs.strapi.io/dev-docs/intro)
-
+## setup
+```shell
+pnpm run setup
+```
 ## startup
 
 
