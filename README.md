@@ -1,19 +1,22 @@
 ## strapi cms
 references [strapi official website](https://docs.strapi.io/dev-docs/intro)
-## setup
+## quick start
 ```shell
 pnpm run setup
 ```
+```shell
+pnpm run develop
+```
+
+
+
 ## startup
-
-
 **1st step: install the dep** 
 ```shell
 pnpm install
 ```
 
 **2ed step: 环境变量**
-
 please copy the `.env.example` to `.env`. The content of .env customized by yourself!
 
 **3rd: database**
@@ -24,12 +27,10 @@ docker-compose up -d
 ```
 + mysql ...
 
-
 **4th: develop**
 ```shell
 pnpm run develop
 ```
-
 
 ## import bankup demo if you need!
 
